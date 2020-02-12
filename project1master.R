@@ -9,7 +9,7 @@ library(igraph)
 # creates umsimplified graph and plots it
 el <- read.table("data/email-EU/email-EU.edges")
 unSimGraph <- graph.data.frame(el, directed = FALSE)
-#plot(unSimGraph)
+plot(unSimGraph)
 
 
 # Question 3
@@ -20,3 +20,4 @@ unSimGraph <- graph.data.frame(el, directed = FALSE)
 
 
 # Question 5
+

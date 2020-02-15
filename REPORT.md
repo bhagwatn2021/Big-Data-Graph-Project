@@ -19,3 +19,4 @@ Our results were:
 
 17763 665 and 13 respectively, the two new furthest nodes and their distance, respectively. 
 
+While we cannot be certain that removing an edge in the original longest path determines whether there are multiple longest paths as removing an edge can lead to removing shorter paths between edges, we can conclude that it is likely that there are multiple longest paths because the removal of one edge in the longest path led to a change in the end node in the new longest path. If the removal of an edge made the path longer and the original longest path was the only one, it is likely that removing an edge would lead to the same end node of 938. 

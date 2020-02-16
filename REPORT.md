@@ -66,6 +66,3 @@ Closeness centralities ranged from 4^-6 to around 1^-5. The max closeness centra
 
 ##Ego
 We used the ego and ego size functions on the entire graph and the four nodes of focus. Nodes 1 and 83 had an ego size of 193 and 96, respectively. Thus, they seemed more connected and central than other nodes. Most nodes had an ego size of 2. The ego function returned us nodes in the neighborhood of vertices, and nodes 1 and 83 seemed to have more nodes in its neighborhood than others. The max ego size was 624, extracted from the max function. While nodes 1 and 83 seemed to be nodes with larger ego sizes, they did not have ego sizes close to the maximum. 
-
-
-

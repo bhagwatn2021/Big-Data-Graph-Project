@@ -31,3 +31,13 @@ farthest.nodes(multLong, directed = TRUE, unconnected = TRUE)
 #Largest clique
 clique_num(unSimGraph)
 largest_cliques(unSimGraph)
+
+#Centrality and power centrality
+unSimGraph <- simplify(unSimGraph)
+pc1 <- power_centrality(unSimGraph,exponent=2.0)
+pc2 <- power_centrality(unSimGraph,c(1,102, 174, 83),exponent=2.0)
+max(pc1)
+pc1
+pc2
+
+

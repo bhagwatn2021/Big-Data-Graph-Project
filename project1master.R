@@ -28,3 +28,6 @@ multLong <- delete_edges(unSimGraph, c("999|938"))
 get.diameter (multLong, directed = TRUE, unconnected = TRUE)
 farthest.nodes(multLong, directed = TRUE, unconnected = TRUE)
 
+#Largest clique
+clique_num(unSimGraph)
+largest_cliques(unSimGraph)

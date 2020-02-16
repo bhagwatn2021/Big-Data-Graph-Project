@@ -53,7 +53,11 @@ Upon analyzing the cliques, it seemed as if many of them included common nodes s
 ## Centrality and Power Centrality
 To calculate the power centrality, we used the power centrality function in igraph and got values for many nodes, ranging from around -70 to 6. A sample of power centrality scores for a few nodes, with a power of 2: (2.526634e-03 -7.910153e-18 -7.910153e-18  6.189658e-03 -7.177358e-12 -7.910153e-18  1.583946e-02 -7.910153e-18). 
  
-We also used the max function to calculate the max power centrality, 6.462346. From this value, we could get an idea of how central nodes 1, 102, 174, and 83 are based on them being common in large cliques. So we ran the power centrality function with a power of 2 again with only those nodes, and got: -4.361631e-18  6.467854e-19 -3.390712e-17  1.844985e-04  for each respective node. While 1, 102, and 174 were not as central as expected, 83 was amongst the more relatively power-central nodes. 
+We also used the max function to calculate the max power centrality, 6.462346. From this value, we could get an idea of how central nodes 1, 83, 102, and 174 are based on them being common in large cliques. So we ran the power centrality function with a power of 2 again with only those nodes, and got: -4.361631e-18  6.467854e-19 -3.390712e-17  1.844985e-04  for each respective node. While 1, 102, and 83 were not as central as expected, 174 was amongst the more relatively power-central nodes. 
 
 We also looked at alpha centrality using the alpha centrality function in igraph. We first calculated the alpha centrality for every node by passing in all vertices into the function, and got values ranging from -3481980 to  1.734901e+18, however many nodes had an an alpha centrality score of 1. A sample of some alpha centrality scores of nodes: 3.784966e+01  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00  1.000000e+00
+
+After calculating the alpha centrality for each node, we filtered nodes 1, 83, 102, and 174 to test their alpha centrality. We found:  
+5.824396e+17 1.406113e+03 1.000000e+00 1.000000e+00 for these nodes, respectively. Nodes 1 and 83 seemed to have a relatively higher alpha centrality than the rest of the nodes. 
+
 

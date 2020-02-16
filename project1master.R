@@ -40,4 +40,11 @@ max(pc1)
 pc1
 pc2
 
+ac1 <- alpha_centrality(unSimGraph, alpha = 1, loops = FALSE,
+                 exo = 1, weights = NULL, tol = 1e-07, sparse = TRUE)
+ac2 <- alpha_centrality(unSimGraph, nodes = c(1,83,102,174), alpha = 1, loops = FALSE,
+                 exo = 1, weights = NULL, tol = 1e-07, sparse = TRUE)
+ac1
+max(ac1)
+ac2
 

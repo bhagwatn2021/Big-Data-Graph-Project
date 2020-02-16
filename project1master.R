@@ -59,3 +59,21 @@ cc2
 max(cc1)
 max(cc2)
 
+
+#Ego
+egs1 <- ego_size(unSimGraph, order = 1, mode = c("all"), mindist = 0)
+
+eg1 <- ego(unSimGraph, order = 1, mode = c("all", "out", "in"),
+    mindist = 0)
+
+egs2 <- ego_size(unSimGraph, order = 1, nodes = c(1,83,102,174), mode = c("all"), mindist = 0)
+
+eg2 <- ego(unSimGraph, order = 1, nodes = c(1,83,102,174), mode = c("all", "out", "in"),
+    mindist = 0)
+
+eg1
+eg2
+egs1
+egs2
+max(egs1)
+max(egs2)

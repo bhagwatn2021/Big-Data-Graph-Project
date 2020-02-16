@@ -49,3 +49,5 @@ To determine the largest clique, we used the clique num function from igraph whi
 ( 950 83  174 214 82  502 453 87  355 279 95  888 )
 
 Upon analyzing the cliques, it seemed as if many of them included common nodes such as 1, 102, 174, 83, etc.). We suspect that due to the fact that each of these nodes generate numerous minimally-connected subgraphs, they seem to be more central nodes.
+
+## Centrality and Power Centrality

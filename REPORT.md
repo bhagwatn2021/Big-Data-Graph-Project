@@ -1,4 +1,4 @@
-# Graph Analytics Project- Fleu Francois, Neel Bhagwat, Eptisam Kassim, Andrew Nguyen
+# Graph Analytics Project- Fleurevca Francois, Neel Bhagwat, Eptisam Kassim, Andrew Nguyen
 
 
 ## Question 5

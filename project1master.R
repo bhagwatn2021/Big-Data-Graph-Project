@@ -51,3 +51,11 @@ ac2
 ec <- eigen_centrality(unSimGraph)$vector
 max(ec)
 
+cc1 <- closeness(unSimGraph, mode = c("all"), weights = NULL, normalized = FALSE)
+cc2 <- closeness(unSimGraph, vids = c(1,83,102,174), mode = c( "all"), weights = NULL, normalized = FALSE)
+
+cc1
+cc2
+max(cc1)
+max(cc2)
+

@@ -60,4 +60,4 @@ We also looked at alpha centrality using the alpha centrality function in igraph
 After calculating the alpha centrality for each node, we filtered nodes 1, 83, 102, and 174 to test their alpha centrality. We found:  
 5.824396e+17 1.406113e+03 1.000000e+00 1.000000e+00 for these nodes, respectively. Nodes 1 and 83 seemed to have a relatively higher alpha centrality than the rest of the nodes. 
 
-
+We also used the eigen centrality function to find the eigen centrality index for the graph, which we found to be 56.23739. We also used the max function to calculate the maximum eigen centrality value, which was 1. We found that nodes 1 and 174 had eigen centrality values of 2.263548e-01 and 6.977827e-01, respectively, indicating that they had higher centrality scores than that of many other nodes. 

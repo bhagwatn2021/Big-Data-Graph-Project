@@ -1,5 +1,13 @@
 # Graph Analytics Project- Fleurevca Francois, Neel Bhagwat, Eptisam Kassim, Andrew Nguyen
 
+## Question 4
+## Functions
+### 1. Dyad Census
+The dyad census measures the relationship between each pair of vertices on a directed graph and classsifies the relationship 3 ways, a mutual connection (there is an edge from a to b and also from b to a), non-mutual connection (there is an edge either from a to b or from b to a but not the other way), and null connection (no edges between a and b).
+
+Upon running the dyay_census() function on our graph, it was show to us that between all of the vertices of the graph there are 0 mutual connections, 54,397 non-mutual connection, and 525,781,838 null connections.
+
+
 
 ## Question 5
 ## Longest path

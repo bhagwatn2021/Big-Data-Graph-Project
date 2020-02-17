@@ -1,5 +1,86 @@
 # Graph Analytics Project- Fleurevca Francois, Neel Bhagwat, Eptisam Kassim, Andrew Nguyen
 
+## Question 4
+## Functions
+### 1. Dyad Census
+The dyad census measures the relationship between each pair of vertices on a directed graph and classsifies the relationship 3 ways, a mutual connection (there is an edge from a to b and also from b to a), non-mutual connection (there is an edge either from a to b or from b to a but not the other way), and null connection (no edges between a and b).
+
+Upon running the dyay_census() function on our graph, it was show to us that between all of the vertices of the graph there are 0 mutual connections, 54,397 non-mutual connection, and 525,781,838 null connections.
+
+### 2. Triad Census
+The triad census classifies every triple of vertices in a directed graph into one of 16 states. The 16 states are as follows:
+
+1. A, B, C, the empty graph.
+2. A->B, C, a graph with a single directed edge.
+3. A<->B, C, a graph with a mutual connection between two vertices.
+4. A<-B->C, the binary out-tree.
+5. A->B<-C, the binary in-tree.
+6. A->B->C, the directed line.
+7. A<->B<-C.
+8. A<->B->C.
+9. A->B<-C, A->C.
+10. A<-B<-C, A->C.
+11. A<->B<->C.
+12. A<-B->C, A<->C.
+13. A->B<-C, A<->C.
+14. A->B->C, A<->C.
+15. A->B<->C, A<->C.
+16. A<->B<->C, A<->C, the complete graph.
+
+When triad_census() is called on our graph, the results are:
+1. 5.682181e+12 
+2. 1.753156e+09
+3. 0.000000e+00
+4. 1.550640e+05 
+5. 4.251352e+06 
+6. 9.352180e+05
+7. 0.000000e+00 
+8. 0.000000e+00 
+9. 4.899200e+04
+10. 0.000000e+00 
+11. 0.000000e+00 
+12. 0.000000e+00
+13. 0.000000e+00 
+14. 0.000000e+00 
+15. 0.000000e+00
+16. 0.000000e+00
+
+### 3. Graph Motifs
+Graph motifs are small connected subgraphs with a well-defined structure. The motifs() function finds the total number of possible motif types for the graph and then returns the number of motifs for each type. The count_motifs() function finds the total number of overall motifs of a single size. 
+
+Upon calling motifs(size = 3) on our graph, we received the following results:
+
+1. NA      
+2. NA 
+3. 4251352      
+4. NA
+5. 935218       
+6. 0  
+7. 155064   
+8. 48992
+9. 0       
+10. 0       
+11. 0       
+12. 0
+13. 0       
+14. 0       
+15. 0       
+16. 0
+
+From the data you can see, that there are a few subgraphs of size 3 that are not considered motifs and therefore marked as NA. In addtion, a large amount of the motifs are of the 3rd type. 
+
+When count_motifs(size = 3) is called on our graph, we get a return of 5,390,626, letting us know that there are a total of 5 million motifs on our graph.
+
+### 4. Girth of a graph
+The girth of a graph is the length of the shortest circle in it. The girth(graph, circle = TRUE) function only works on undirected graphs so when using our directed graph, the function will treat it like an undirected graph. 
+
+When we called the function on our graph, the results were:
+$girth = 3, $circle = c(52, 26, 82). The shortest circle in our undirected graph has a length of 3 and those 3 vertices are 52, 62, and 82.
+
+### 5. Chordality of a graph
+A graph is chordal if each of its cycles of four or more nodes has a chord, which is an edge joining two nodes that are not adjacent in the cycle. The is_chordal(graph, fillin=TRUE) function returns to us whether our graph is chordal and a vector of edges to fill in to make our graph chordal if it is not.
+
+Upon calling is_chordal(graph, fillin=TRUE) on our graph, our graph was determined to not be chordal and had a total of 389,358 edges to fill in to transform our graph into a chordal graph.
 
 ## Question 5
 ## Longest path

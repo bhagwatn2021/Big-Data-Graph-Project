@@ -2,13 +2,11 @@
 # Fleurevca Francois, Andrew Nguyen, Neel Bhagwat, Eptisam Kassim
 
 # Base for each Question/Question 2
-install.packages("igraph")
-install.packages("sna")
+
 library(igraph)
 
 # creates umsimplified graph and plots it
 el <- read.table("data/email-EU/email-EU.edges")
-
 unSimGraph <- graph.data.frame(el, directed = TRUE)
 plot(unSimGraph)
 
@@ -16,6 +14,23 @@ plot(unSimGraph)
 
 
 # Question 4
+#Dyad Census
+dyad_census(unSimGraph)
+
+#Triad Census
+triad_census(unSimGraph)
+
+#Graph Motifs
+motifs(unSimGraph, size = 3)
+count_motifs(unSimGraph, size = 3)
+motifs(unSimGraph, size = 4)
+count_motifs(unSimGraph, size = 4)
+
+#Girth of a graph
+girth(unSimGraph, circle = TRUE)
+
+#Chordality of a graph
+is_chordal(unSimGraph, fillin=TRUE)
 
 
 # Question 5

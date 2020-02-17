@@ -11,9 +11,14 @@ unSimGraph <- graph.data.frame(el, directed = TRUE)
 plot(unSimGraph)
 
 # Question 3
+edge_density(unSimGraph, loops = FALSE)
+diameter(unSimGraph, directed = TRUE, unconnected = TRUE, weights = NULL)
+edge_betweenness(unSimGraph, e = E(unSimGraph), directed = TRUE, weights = NULL)
+mean_distance(unSimGraph, directed = TRUE, unconnected = TRUE)
 
 
 # Question 4
+
 #Dyad Census
 dyad_census(unSimGraph)
 
@@ -93,3 +98,4 @@ egs1
 egs2
 max(egs1)
 max(egs2)
+

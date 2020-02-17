@@ -7,8 +7,10 @@ library(igraph)
 
 # creates umsimplified graph and plots it
 el <- read.table("data/email-EU/email-EU.edges")
+
 unSimGraph <- graph.data.frame(el, directed = TRUE)
 plot(unSimGraph)
+
 
 # Question 3
 edge_density(unSimGraph, loops = FALSE)
@@ -18,6 +20,27 @@ mean_distance(unSimGraph, directed = TRUE, unconnected = TRUE)
 
 
 # Question 4
+#Size of graph
+gsize(unSimGraph)
+
+#Number of triangles
+count_triangles(unSimGraph, vids = V(unSimGraph))
+
+#Bipartite mapping
+bipartite_mapping(unSimGraph)
+
+#Lengths of shortest paths between all vertices
+distance_table(unSimGraph, directed = TRUE)
+
+#Assortativity coefficient 
+
+assortativity_degree(unSimGraph, directed = TRUE)
+
+#Number of components
+components(unSimGraph, mode = c("weak", "strong"))
+
+#Hub score
+hub_score(unSimGraph, scale = TRUE, weights = NULL, options = arpack_defaults)
 
 #Dyad Census
 dyad_census(unSimGraph)

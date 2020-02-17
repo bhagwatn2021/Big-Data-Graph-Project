@@ -7,6 +7,45 @@ The dyad census measures the relationship between each pair of vertices on a dir
 
 Upon running the dyay_census() function on our graph, it was show to us that between all of the vertices of the graph there are 0 mutual connections, 54,397 non-mutual connection, and 525,781,838 null connections.
 
+### 2. Triad Census
+The triad census classifies every triple of vertices in a directed graph into one of 16 states. The 16 states are as follows:
+
+1. A, B, C, the empty graph.
+2. A->B, C, a graph with a single directed edge.
+3. A<->B, C, a graph with a mutual connection between two vertices.
+4. A<-B->C, the binary out-tree.
+5. A->B<-C, the binary in-tree.
+6. A->B->C, the directed line.
+7. A<->B<-C.
+8. A<->B->C.
+9. A->B<-C, A->C.
+10. A<-B<-C, A->C.
+11. A<->B<->C.
+12. A<-B->C, A<->C.
+13. A->B<-C, A<->C.
+14. A->B->C, A<->C.
+15. A->B<->C, A<->C.
+16. A<->B<->C, A<->C, the complete graph.
+
+When triad_census() is called on our graph, the results are:
+1. 5.682181e+12 
+2. 1.753156e+09
+3. 0.000000e+00
+4. 1.550640e+05 
+5. 4.251352e+06 
+6. 9.352180e+05
+7. 0.000000e+00 
+8. 0.000000e+00 
+9. 4.899200e+04
+10. 0.000000e+00 
+11. 0.000000e+00 
+12. 0.000000e+00
+13. 0.000000e+00 
+14. 0.000000e+00 
+15. 0.000000e+00
+16. 0.000000e+00
+
+### 3. Graph Motifs
 
 
 ## Question 5

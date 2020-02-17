@@ -22,13 +22,16 @@ triad_census(unSimGraph)
 
 #Graph Motifs
 motifs(unSimGraph, size = 3)
+count_motifs(unSimGraph, size = 3)
 motifs(unSimGraph, size = 4)
+count_motifs(unSimGraph, size = 4)
 
 #Girth of a graph
 girth(unSimGraph, circle = TRUE)
 
 #Chordality of a graph
 is_chordal(unSimGraph, fillin=TRUE)
+
 
 # Question 5
 #Longest path in the graph

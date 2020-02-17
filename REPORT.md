@@ -46,7 +46,41 @@ When triad_census() is called on our graph, the results are:
 16. 0.000000e+00
 
 ### 3. Graph Motifs
+Graph motifs are small connected subgraphs with a well-defined structure. The motifs() function finds the total number of possible motif types for the graph and then returns the number of motifs for each type. The count_motifs() function finds the total number of overall motifs of a single size. 
 
+Upon calling motifs(size = 3) on our graph, we received the following results:
+
+1. NA      
+2. NA 
+3. 4251352      
+4. NA
+5. 935218       
+6. 0  
+7. 155064   
+8. 48992
+9. 0       
+10. 0       
+11. 0       
+12. 0
+13. 0       
+14. 0       
+15. 0       
+16. 0
+
+From the data you can see, that there are a few subgraphs of size 3 that are not considered motifs and therefore marked as NA. In addtion, a large amount of the motifs are of the 3rd type. 
+
+When count_motifs(size = 3) is called on our graph, we get a return of 5,390,626, letting us know that there are a total of 5 million motifs on our graph.
+
+### 4. Girth of a graph
+The girth of a graph is the length of the shortest circle in it. The girth(graph, circle = TRUE) function only works on undirected graphs so when using our directed graph, the function will treat it like an undirected graph. 
+
+When we called the function on our graph, the results were:
+$girth = 3, $circle = c(52, 26, 82). The shortest circle in our undirected graph has a length of 3 and those 3 vertices are 52, 62, and 82.
+
+### 5. Chordality of a graph
+A graph is chordal if each of its cycles of four or more nodes has a chord, which is an edge joining two nodes that are not adjacent in the cycle. The is_chordal(graph, fillin=TRUE) function returns to us whether our graph is chordal and a vector of edges to fill in to make our graph chordal if it is not.
+
+Upon calling is_chordal(graph, fillin=TRUE) on our graph, our graph was determined to not be chordal and had a total of 389,358 edges to fill in to transform our graph into a chordal graph.
 
 ## Question 5
 ## Longest path

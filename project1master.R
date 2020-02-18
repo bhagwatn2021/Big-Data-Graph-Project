@@ -3,25 +3,13 @@
 
 # Base for each Question
 install.packages("igraph")
+install.packages("sna")
 library(igraph)
 
 # creates unsimplified graph and plots it
 el <- read.table("data/email-EU/email-EU.edges")
 unSimGraph <- graph.data.frame(el, directed = TRUE)
 plot(unSimGraph)
-
-# creates umsimplified graph and plots it
-el <- read.table("data/email-EU/email-EU.edges")
-<<<<<<< HEAD
-unSimGraph <- graph.data.frame(el, directed = FALSE)
-#plot(unSimGraph)
-plot(unSimGraph, layout=layout.kamada.kawai)
-=======
-
-unSimGraph <- graph.data.frame(el, directed = TRUE)
-plot(unSimGraph)
-
->>>>>>> c4006a28abb464ece4f8b9f1f6bf7fd544c55a9d
 
 # Question 3
 # Edge Density
@@ -147,10 +135,3 @@ egs1
 egs2
 max(egs1)
 max(egs2)
-
-<<<<<<< HEAD
-
-
-# Question 5
-=======
->>>>>>> c4006a28abb464ece4f8b9f1f6bf7fd544c55a9d

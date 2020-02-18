@@ -10,12 +10,14 @@ library(igraph)
 el <- read.table("data/email-EU/email-EU.edges")
 unSimGraph <- graph.data.frame(el, directed = FALSE)
 #plot(unSimGraph)
-
+plot(unSimGraph, layout=layout.kamada.kawai)
 
 # Question 3
 
 
 # Question 4
+
+
 
 
 

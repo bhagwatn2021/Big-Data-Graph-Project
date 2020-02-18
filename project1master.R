@@ -3,7 +3,6 @@
 
 # Base for each Question
 install.packages("igraph")
-install.packages("sna")
 library(igraph)
 
 # creates unsimplified graph and plots it
@@ -19,9 +18,24 @@ plot(unSimGraph)
 
 
 # Question 3
+# Edge Density
 edge_density(unSimGraph, loops = FALSE)
+
+# Graph Diameter
 diameter(unSimGraph, directed = TRUE, unconnected = TRUE, weights = NULL)
-edge_betweenness(unSimGraph, e = E(unSimGraph), directed = TRUE, weights = NULL)
+
+# Edge Betweenness
+unSimEB <- edge_betweenness(unSimGraph, e = E(unSimGraph), directed = TRUE, weights = NULL)
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+getmode(unSimEB)
+mean(unSimEB)
+median(unSimEB)
+max(unSimEB)
+
+# Mean Distance of Graph
 mean_distance(unSimGraph, directed = TRUE, unconnected = TRUE)
 
 

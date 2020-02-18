@@ -2,16 +2,15 @@
 # Fleurevca Francois, Andrew Nguyen, Neel Bhagwat, Eptisam Kassim
 
 # Base for each Question
-install.packages("igraph")
-install.packages("sna")
+
 library(igraph)
+library(sna)
 
 # creates unsimplified graph and plots it
 el <- read.table("data/email-EU/email-EU.edges")
 unSimGraph <- graph.data.frame(el, directed = TRUE)
-plot(unSimGraph)
 
-# Question 3
+# --------------------------------- Question 3 --------------------------------------------------
 # Edge Density
 edge_density(unSimGraph, loops = FALSE)
 
@@ -20,6 +19,7 @@ diameter(unSimGraph, directed = TRUE, unconnected = TRUE, weights = NULL)
 
 # Edge Betweenness
 unSimEB <- edge_betweenness(unSimGraph, e = E(unSimGraph), directed = TRUE, weights = NULL)
+unSimEB
 getmode <- function(v) {
   uniqv <- unique(v)
   uniqv[which.max(tabulate(match(v, uniqv)))]
@@ -32,30 +32,20 @@ max(unSimEB)
 # Mean Distance of Graph
 mean_distance(unSimGraph, directed = TRUE, unconnected = TRUE)
 
+# Simplify 
+simplify(unSimGraph)
 
-# Question 4
-#Size of graph
-gsize(unSimGraph)
+# Vertex Attributes - 
+vertex_attr(unSimGraph)
 
-#Number of triangles
-count_triangles(unSimGraph, vids = V(unSimGraph))
+# Page Rank - 
+page_rank(unSimGraph)
 
-#Bipartite mapping
-bipartite_mapping(unSimGraph)
+# Alpha Centrality -
+alpha_centrality(unSimGraph)
 
-#Lengths of shortest paths between all vertices
-distance_table(unSimGraph, directed = TRUE)
 
-#Assortativity coefficient 
-
-assortativity_degree(unSimGraph, directed = TRUE)
-
-#Number of components
-components(unSimGraph, mode = c("weak", "strong"))
-
-#Hub score
-hub_score(unSimGraph, scale = TRUE, weights = NULL, options = arpack_defaults)
-
+# ---------------------------------- Question 4 --------------------------------------------------
 #Dyad Census
 dyad_census(unSimGraph)
 
@@ -74,8 +64,25 @@ girth(unSimGraph, circle = TRUE)
 #Chordality of a graph
 is_chordal(unSimGraph, fillin=TRUE)
 
+#Size of graph
+gsize(unSimGraph)
 
-# Question 5
+#Number of triangles
+count_triangles(unSimGraph, vids = V(unSimGraph))
+
+#Bipartite mapping
+bipartite_mapping(unSimGraph)
+
+#Assortativity coefficient 
+assortativity_degree(unSimGraph, directed = TRUE)
+
+#Number of components
+components(unSimGraph, mode = c("weak", "strong"))
+
+#Hub score
+hub_score(unSimGraph, scale = TRUE, weights = NULL, options = arpack_defaults)
+
+# ---------------------------------------- Question 5 ---------------------------------------------
 #Longest path in the graph
 get.diameter (unSimGraph, directed = TRUE, unconnected = TRUE)
 farthest.nodes(unSimGraph, directed = TRUE, unconnected = TRUE)
